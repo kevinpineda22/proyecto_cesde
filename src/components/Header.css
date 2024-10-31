@@ -1,0 +1,59 @@
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 30px;
+    background-color: #877CC7;
+
+  }
+  
+  .logo img {
+    width: 86px;
+    height: auto;
+    position: relative;
+    left: 7rem;
+    top: 0rem;
+  }
+  
+  .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav ul li a:hover {
+    color: #61dafb; /* Color al pasar el ratón por encima */
+  }
+  
+  .nav ul li a:active {
+    color: #21a1f1; /* Color al hacer clic */
+  }
+  
+  @media (max-width: 768px) {
+    /* Responsivo para pantallas pequeñas */
+    .header {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .logo img {
+      width: 80px;
+    }
+  }
+  

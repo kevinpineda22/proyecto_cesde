@@ -1,0 +1,77 @@
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:  #FFF4F4;
+    position: relative;
+    left: -4rem;
+    top: -1rem;
+  }
+  
+  .login-form {
+    background: white;
+    padding: 180px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-form h2 {
+   font-size: 20px;
+    color:black ;
+    position: relative;
+    top: -9rem;
+    left: -9rem;
+  }
+  
+  .login-form input {
+    display: block;
+    width: 170%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: black;
+    color: white;
+    position: relative;
+    left: -8rem;
+    
+  }
+  .login-form label{
+    position: relative;
+    display: flex;
+    left: -8rem;
+  }
+  
+  .login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color:  #877CC7;;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    top: 3rem;
+    left: -4rem;
+  }
+  
+  
+  .Logotipo{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    position: relative;
+    top: -10rem;
+    left: 19rem;
+  
+  }
+  .login-form p{
+    position: relative;
+    left: -8rem;
+    top: -3rem;
+    font-size: 12px;
+    color: #877CC7;;
+    margin-top: 10px;
+  }
