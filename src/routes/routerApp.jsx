@@ -1,6 +1,6 @@
 import Login from '../pages/auth/Login'
 import Home from '../pages/Home'
-import Formulario from '../components/Formulario'
+import Formulario from '../pages/Formulario'
 
 
 export let routes = [

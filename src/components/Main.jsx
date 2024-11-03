@@ -1,7 +1,7 @@
 // src/components/Main.js
 import React, { useState } from 'react';
 import './Main.css';
-import { ProductSection } from './ProductSection';
+import { ProductSection } from '../pages/ProductSection';
 
 const Main = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
