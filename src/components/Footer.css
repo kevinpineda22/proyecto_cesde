@@ -4,7 +4,7 @@
     justify-content: space-between; /* Distribuye las columnas */
     padding: 100px;
     background-color:  #877CC7; /* Color de fondo */
-    color: black; /* Color del texto */
+    color: rgb(233, 14, 14); /* Color del texto */
   }
   
   /* Columna izquierda */
