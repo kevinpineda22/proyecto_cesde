@@ -1,7 +1,9 @@
-// src/components/Main.js
+// src/components/Main.jsx
 import React, { useState } from 'react';
 import './Main.css';
 import { ProductSection } from '../pages/ProductSection';
+import { CartProvider } from '../pages/CartContext'; // Importación de CartContext
+import { Cart } from '../components/Cart'; // Carrito de compras (si lo has creado)
 
 const Main = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -48,34 +50,36 @@ const Main = () => {
   };
 
   return (
-    <div>
-    <main className="main-content">
-      {/* Carrusel de imágenes */}
-      <div className="carousel">
-        <div className="carousel-inner" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
-          {images.map((image, index) => (
-            <div key={index} className="carousel-item">
-              <img src={image} alt={`Slide ${index + 1}`} />
+    <CartProvider> {/* Proveedor de contexto para el carrito */}
+      <div>
+        <main className="main-content">
+          {/* Carrusel de imágenes */}
+          <div className="carousel">
+            <div className="carousel-inner" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+              {images.map((image, index) => (
+                <div key={index} className="carousel-item">
+                  <img src={image} alt={`Slide ${index + 1}`} />
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        <button className="carousel-control prev" onClick={prevSlide}>‹</button>
-        <button className="carousel-control next" onClick={nextSlide}>›</button>
+            <button className="carousel-control prev" onClick={prevSlide}>‹</button>
+            <button className="carousel-control next" onClick={nextSlide}>›</button>
+          </div>
+        </main>
+
+        {/* Sección de Productos de Belleza */}
+        <ProductSection title="Productos de Belleza" products={beautyProducts} />
+
+        {/* Sección de Productos de Aseo */}
+        <ProductSection title="Productos de Aseo" products={cleaningProducts} />
+
+        {/* Sección de Moda */}
+        <ProductSection title="Moda" products={fashionProducts} />
+
+        {/* Carrito de Compras */}
+        <Cart /> {/* Carrito (si lo tienes implementado) */}
       </div>
-
-    
-    </main>
-      {/* Sección de Productos de Belleza */}
-      <ProductSection title="Productos de Belleza" products={beautyProducts}  />
-
-      {/* Sección de Productos de Aseo */}
-      <ProductSection title="Productos de Aseo" products={cleaningProducts} />
-
-      {/* Sección de Moda */}
-      <ProductSection title="Moda" products={fashionProducts} />
-
-    </div>
-    
+    </CartProvider>
   );
 };
 
