@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    height: 171vh;
+    height: 110vh;
     background-color:  #FFF4F4;
   }
 
@@ -17,29 +17,29 @@
     width: 50%;
     height: 100%;
     position: relative;
-    top: -4rem;
+    top: -2rem;
     left: -12rem;
     
-    background-color:  #877CC7;
+    background-color:  white;
     
   }
   .logoformulario{
-    width: 40%;
+    width: 68%;
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: -50px;
     position: relative;
     top: -15em;
-    left: 4rem;
+    left: 5rem;
   }
   
  
   
   .image {
     width: 100px;
-    margin-bottom: 10px;
+    margin-bottom: 90px;
     position: relative;
-    left: 0rem;
-    top: -11rem;
+    left: 5rem;
+    top: 1rem;
     display: grid;
     grid-row: auto;
   }
@@ -47,7 +47,7 @@
 /* Sección derecha */
 .right-section {
   width: 80%;
-  height: 56%;
+  height: 46%;
   display: flex;
   justify-content: space-between;
   gap: 6px; /* Espacio entre formularios */
@@ -58,18 +58,18 @@
 .form {
   background: white;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px#877CC7 ;
+  border-radius: 18px;
+  box-shadow: 0 4px 8px #877CC7 ;
   width: 150%;
   border: 2px dotted#877CC7; /* Borde punteado */
-  max-width: 385px;
+  max-width: 500px;
   gap: 2px;
   position: relative;
   top: 4rem;
 }
 
 h2 {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 label {
