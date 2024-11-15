@@ -4,8 +4,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1px 30px;
+    padding: 10px 20px;
     background-color: #877CC7;
+    box-shadow: "0 2px 5px rgba(0, 0, 0, 0.1)";
+    position: "sticky";
+    top: 0;
+    z-index: 1;
+    
 
   }
   
@@ -26,25 +31,25 @@
   }
   
   .nav ul li a {
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease;
   }
   
   .nav ul li a:hover {
-    color: #61dafb; /* Color al pasar el ratón por encima */
+    color: #ffffff; /* Color al pasar el ratón por encima */
   }
   
   .nav ul li a:active {
-    color: #21a1f1; /* Color al hacer clic */
+    color: #877CC7; /* Color al hacer clic */
   }
   
   @media (max-width: 768px) {
     /* Responsivo para pantallas pequeñas */
     .header {
       flex-direction: column;
-      padding: 10px;
+      padding: 20px;
     }
   
     .nav ul {
