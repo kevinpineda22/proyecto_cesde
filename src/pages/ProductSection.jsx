@@ -1,8 +1,8 @@
-
+// src/pages/ProductSection.jsx
 import React from 'react';
-import { Product } from './Product';
+import { Product } from './Product'; // Importar el componente Product
 
-const ProductSection = ({ title, products,className }) => {
+const ProductSection = ({ title, products, className }) => {
   return (
     <section className={`product-section ${className}`}>
       <h2>{title}</h2>
@@ -10,9 +10,7 @@ const ProductSection = ({ title, products,className }) => {
         {products.map((product) => (
           <Product 
             key={product.id} 
-            image={product.image} 
-            name={product.name} 
-            price={product.price} 
+            product={product}  // Enviar el objeto de producto completo
           />
         ))}
       </div>
@@ -20,5 +18,4 @@ const ProductSection = ({ title, products,className }) => {
   );
 };
 
-export {ProductSection};
-
+export { ProductSection };
