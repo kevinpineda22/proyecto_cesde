@@ -4,63 +4,63 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color:  #FFF4F4;
+    background-color:  #fff8f4;
     position: relative;
-    left: -4rem;
+    left: 1rem;
     top: -1rem;
   }
   
   .login-form {
     background: white;
-    padding: 180px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 250px;
+    border-radius: 100px;
+    box-shadow: 0 4px 10px rgba(133, 64, 139, 0.1);
   }
   
   .login-form h2 {
-   font-size: 20px;
-    color:black ;
+   font-size: 30px;
+    color:grey ;
     position: relative;
     top: -9rem;
-    left: -9rem;
+    left: 1rem;
   }
   
   .login-form input {
     display: block;
-    width: 170%;
+    width: 150%;
     padding: 10px;
     margin-bottom: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+    border-radius: 70px;
+    border: px solid #ccc;
     background-color: black;
     color: white;
     position: relative;
-    left: -8rem;
+    left: -3rem;
     
   }
   .login-form label{
     position: relative;
     display: flex;
-    left: -8rem;
+    left: -2rem;
   }
   
   .login-form button {
-    width: 100%;
-    padding: 10px;
+    width: 75%;
+    padding: 15px;
     background-color:  #877CC7;;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 70px;
     cursor: pointer;
     position: relative;
     top: 3rem;
-    left: -4rem;
+    left: 2rem;
   }
   
   
   .Logotipo{
-    width: 150px;
-    height: 150px;
+    width: 24px;
+    height: 190px;
     display: flex;
     position: relative;
     top: -10rem;
@@ -69,9 +69,81 @@
   }
   .login-form p{
     position: relative;
-    left: -8rem;
+    left: 2rem;
     top: -3rem;
     font-size: 12px;
     color: #877CC7;;
     margin-top: 10px;
   }
+
+
+/* Media Queries para dispositivos móviles y pantallas pequeñas */
+@media (max-width: 768px) {
+  .login-form {
+    padding: 20px;           /* Menos relleno en pantallas más pequeñas */
+    max-width: 90%;           /* El formulario ocupa el 90% del ancho */
+    margin-top: 20px;         /* Ajusta el margen superior */
+  }
+
+  .login-container {
+    top: 0;
+    left: 0;
+    padding: 10px;
+  }
+
+  .login-form h2 {
+    font-size: 22px;          /* Reduce el tamaño del título en pantallas pequeñas */
+    top: -3rem;
+    left: 0;
+  }
+
+  .login-form input {
+    max-width: 100%;          /* Inputs ocupan todo el ancho disponible */
+    left: 0;                  /* Ajuste a la izquierda */
+  }
+
+  .login-form button {
+    width: 100%;              /* El botón ocupa todo el ancho en pantallas pequeñas */
+    left: 0;                  /* El botón se ajusta al centro */
+    top: 1rem;                /* Ajusta la posición */
+  }
+
+  .login-form p {
+    font-size: 10px;          /* Reduce el tamaño de texto */
+    left: 0;
+    top: 0;
+  }
+
+  .Logotipo img {
+    max-width: 80px;          /* Ajusta el tamaño del logo en pantallas pequeñas */
+  }
+}
+
+/* Media Queries para dispositivos muy pequeños (móviles en modo vertical) */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 10px;            /* Reduce los márgenes en pantallas muy pequeñas */
+  }
+
+  .login-form {
+    padding: 150px;            /* Menos padding en pantallas más pequeñas */
+    max-width: 20%;           /* El formulario ocupa todo el ancho */
+  }
+
+  .login-form h2 {
+    font-size: 20px;           /* Reduce más el tamaño del título */
+  }
+
+  .login-form input {
+    width: 100%;               /* Asegura que los campos ocupen todo el ancho */
+    max-width: 50%;
+  }
+
+  .login-form button {
+    width: 100%;               /* El botón ocupa el 100% en pantallas muy pequeñas */
+  }
+
+  .Logotipo img {
+    max-width: 70px;           /* Ajusta el logo a un tamaño más pequeño */
+  }
+}

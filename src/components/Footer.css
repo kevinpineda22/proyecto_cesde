@@ -1,0 +1,66 @@
+
+
+/* Estilos generales para el footer */
+.footer {
+    display: flex;
+    justify-content: space-between; /* Distribuye las columnas */
+    padding: 100px;
+    background-color:  #877CC7; /* Color de fondo */
+    color: rgb(0, 0, 0); /* Color del texto */
+  }
+  
+  /* Columna izquierda */
+  .footer-left {
+    text-align: left;
+  }
+  
+  .footer-left ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-left ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-left ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Columna central */
+  .footer-center {
+    text-align: center;
+    align-self: center; /* Alinea verticalmente el texto */
+    position: relative;
+    top: -4rem;
+  }
+  
+  /* Columna derecha */
+  .footer-right {
+    text-align: right;
+  }
+  
+ 
+  
+  .footer-right ul li {
+    margin-bottom: 5px;
+  }
+  .footer-center ul li a{
+    color: white;
+    text-decoration: none;
+  }
+  .footer-center ul{
+    list-style: none;
+    padding: 0;
+
+  }
+  
+  .footer-right ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Efecto al pasar el mouse */
+  .footer a:hover {
+    text-decoration: underline; /* Subray
