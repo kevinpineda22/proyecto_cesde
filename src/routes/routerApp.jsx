@@ -19,5 +19,6 @@ export let routes = [
         element: <Home />,
         
     },
+    
    
 ]
