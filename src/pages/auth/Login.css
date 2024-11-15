@@ -144,6 +144,6 @@
   }
 
   .Logotipo img {
-    max-width: 70px;           /* Ajusta el logo a un tamaño más pequeño */
+    max-width: 100px;           /* Ajusta el logo a un tamaño más pequeño */
   }
 }
