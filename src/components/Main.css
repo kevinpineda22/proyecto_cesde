@@ -1,59 +1,61 @@
 .main-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 26px;
-    position: relative;
-    overflow: hidden;
-  }
-  
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 26px;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel {
+  position: relative;
+  width: 100%; /* Cambio a 100% para que ocupe el contenedor completo */
+  height: 699px;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel-item {
+  min-width: 100%; /* Cada item ocupa el 100% del carrusel */
+  height: 100%;
+}
+
+.carousel-item img {
+  width: 100%; /* Hacemos las imágenes del 100% del contenedor */
+  height: 100%;
+  object-fit: cover; /* Para que cubran el área sin distorsionarse */
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.carousel-control.prev {
+  left: 20px; /* Más cerca del borde izquierdo */
+}
+
+.carousel-control.next {
+  right: 20px; /* Más cerca del borde derecho */
+}
+
+@media (max-width: 768px) {
   .carousel {
-    position: relative;
-    width: 200%;
-    height: 699px;
-    overflow: hidden;
-  }
-  
-  .carousel-inner {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-  }
-  
-  .carousel-item {
-    min-width: 100%;
-    height: 100%;
+    height: 300px; /* Ajustamos la altura para pantallas pequeñas */
   }
   
   .carousel-item img {
-    width: 50%;
-    height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Asegura que la imagen cubra el espacio disponible */
   }
-  
-  .carousel-control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: none;
-    font-size: 2rem;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .carousel-control.prev {
-    left: 4px;
-  }
-  
-  .carousel-control.next {
-    right: 582px;
-  }
-  
-  @media (max-width: 768px) {
-    .carousel {
-      height: 300px;
-    }
-  }
-  
-  
+}
