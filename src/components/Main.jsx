@@ -9,9 +9,9 @@ const Main = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const images = [
-    "/image 2.png",
-    "/image 3.png",
-    "/image 4.png"
+    "https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg",
+    "https://blog.cromantic.com/hs-fs/hubfs/Foto%206%20%283%29%20%281%29.png?height=420&name=Foto%206%20%283%29%20%281%29.png",
+    "https://shopztella.com/wp-content/uploads/2023/05/F7A3150.jpg"
   ];
 
   // Datos de productos
