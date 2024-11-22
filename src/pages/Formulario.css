@@ -14,8 +14,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 50%;
-    height: 100%;
+    width: 54%;
+    height:110%;
     position: relative;
     top: -2rem;
     left: -12rem;
@@ -26,10 +26,10 @@
   .logoformulario{
     width: 68%;
     height: auto;
-    margin-bottom: -50px;
+    margin-bottom: -160px;
     position: relative;
     top: -15em;
-    left: 5rem;
+    left: 7rem;
   }
   
  
@@ -115,4 +115,131 @@ button:hover {
   text-align: center;
   align-items: center;
   font-size: 10px;
+}
+
+
+/* Para pantallas pequeñas (celulares) */
+@media (max-width: 480px) {
+  .container {
+      flex-direction: column; /* Apilar las secciones verticalmente */
+      padding: 10px;
+      height: auto;
+  }
+
+  .left-section, .right-section {
+      width: 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
+      height: auto;
+      position: relative;
+      top: 0;
+      left: 0;
+  }
+
+  .logoformulario {
+      width: 50%; /* Ajustar el tamaño del logo */
+      margin-bottom: -30px;
+      left: 0;
+      top: 0;
+  }
+
+  .right-section {
+      flex-direction: column; /* Apilar los formularios verticalmente */
+      gap: 20px; /* Espacio entre formularios */
+  }
+
+  .form {
+      width: 100%; /* El formulario ocupará el 100% del ancho */
+      max-width: 100%;
+      padding: 15px;
+      top: 0; /* Eliminar margen superior */
+  }
+
+  .h1titulo {
+      font-size: 16px;
+      top: 0;
+      left: 0;
+  }
+
+  button {
+      width: 100%; /* El botón ocupará todo el ancho */
+      margin: 10px 0;
+  }
+
+  /* Reducir tamaños de fuente para dispositivos pequeños */
+  h2 {
+      font-size: 18px;
+  }
+
+  label {
+      font-size: 14px;
+  }
+
+  input {
+      font-size: 14px;
+      padding: 8px;
+  }
+
+  button {
+      font-size: 16px;
+  }
+}
+
+/* Para pantallas ligeramente más grandes (hasta 768px, como en tabletas) */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column; /* Apilar las secciones verticalmente */
+      padding: 15px;
+      height: auto;
+  }
+
+  .left-section, .right-section {
+      width: 100%; /* Ocupa el 100% del ancho en pantallas más pequeñas */
+      height: auto;
+  }
+
+  .logoformulario {
+      width: 70%; /* Ajustar el tamaño del logo */
+      margin-bottom: -30px;
+      left: 0;
+  }
+
+  .right-section {
+      flex-direction: column; /* Apilar los formularios verticalmente */
+      gap: 20px;
+  }
+
+  .form {
+      width: 100%; /* El formulario ocupará el 100% del ancho */
+      max-width: 90%;
+      padding: 15px;
+      top: 0;
+  }
+
+  .h1titulo {
+      font-size: 18px;
+      top: 0;
+      left: 0;
+  }
+
+  /* Ajustar tamaño de los botones */
+  button {
+      width: 100%;
+      margin: 10px 0;
+  }
+
+  h2 {
+      font-size: 20px;
+  }
+
+  label {
+      font-size: 16px;
+  }
+
+  input {
+      font-size: 16px;
+      padding: 10px;
+  }
+
+  button {
+      font-size: 18px;
+  }
 }
