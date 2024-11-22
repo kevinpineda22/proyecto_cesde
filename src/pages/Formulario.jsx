@@ -10,9 +10,6 @@ const Formulario = () => {
        <img src="/logo_dora.jpeg" alt="Logoformulario" className="logoformulario" />
        
 
-        {/* Tres imágenes */}
-        <img src="/image 2.png" alt="Imagen 1" className="image" />
-        <img src="/image 3.png" alt="Imagen 2" className="image" />
       </div>
       
 
@@ -22,7 +19,7 @@ const Formulario = () => {
         {/* Primer formulario */}
         <form className="form">
           <div className='h1titulo'>
-          <h1>ALMACENAMIENTO DE INFORMACION DE MI EMPRESA</h1>
+          <h1>ALMACENAMIENTO DE INFORMACIÓN DE MI EMPRESA</h1>
           </div>
           
           <label>Nombre del Cliente:</label>
