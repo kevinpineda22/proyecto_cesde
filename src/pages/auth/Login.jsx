@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Hook para la redirección
-import { signInWithEmailAndPassword } from 'firebase/auth'; // Importar función de Firebase
-// import { auth } from '../firebase'; // Importar configuración de Firebase
 import './Login.css';
 
 const Login = () => {
@@ -10,15 +8,19 @@ const Login = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  // Valores de login "quemados"
+  const validEmail = 'kevin@gmail.com';
+  const validPassword = '123456';
+
+  const handleSubmit = (e) => {
     e.preventDefault();
     setError('');
-    try {
-      // Validar con Firebase Authentication
-      await signInWithEmailAndPassword(auth, email, password);
+    
+    // Validación con valores "quemados"
+    if (email === validEmail && password === validPassword) {
       console.log('Inicio de sesión exitoso');
       navigate('/formulario'); // Redirige a la página de formulario
-    } catch (err) {
+    } else {
       setError('Email o contraseña incorrectos');
     }
   };
