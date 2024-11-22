@@ -1,0 +1,142 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f7f7f7;
+}
+
+a {
+  color: #2c7a7b;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header Styling */
+.header {
+  background-color: #877CC7;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.header p {
+  font-size: 1rem;
+}
+
+/* Intro Section */
+.intro {
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.intro h2 {
+  color: #877CC7;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Products Section */
+.fragrances-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.fragrance-card {
+  width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.fragrance-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.fragrance-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.fragrance-card-body {
+  padding: 15px;
+  text-align: center;
+}
+
+.fragrance-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.fragrance-price {
+  color: black;
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.fragrance-button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #877CC7;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.fragrance-button:hover {
+  background-color: #b8afee;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.testimonials h2 {
+  color: #877CC7;
+}
+
+.testimonial {
+  margin: 20px auto;
+  max-width: 600px;
+  font-style: italic;
+  color: #555;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #877CC7;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: white;
+}

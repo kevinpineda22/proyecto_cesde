@@ -10,8 +10,8 @@ const Footer = () => {
       <div style={styles.section}>
         <h3 style={styles.heading}>Contáctanos</h3>
         <p style={styles.text}>Teléfono: +57 300 123 4567</p>
-        <p style={styles.text}>Email: contacto@miempresa.com</p>
-        <p style={styles.text}>Dirección: Calle 123, Ciudad, País</p>
+        <p style={styles.text}>Email: susysalo@gmail.com</p>
+        <p style={styles.text}>Dirección: Calle 41 # 21b</p>
       </div>
 
       {/* Sección: Redes Sociales */}
