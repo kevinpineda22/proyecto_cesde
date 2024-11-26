@@ -3,13 +3,19 @@ import { useCart } from '../pages/CartContext'; // Importar el contexto desde 'p
 import './Cart.css'; // Estilos del carrito
 
 const Cart = () => {
-  const { cart, removeFromCart } = useCart();
+  const { cart, removeFromCart, isCartVisible } = useCart();
 
   const total = cart.reduce((acc, product) => acc + product.price, 0);
 
+  // Si el carrito no debe ser visible, no lo mostramos
+  if (!isCartVisible) return null;
+
   return (
     <div className="cart">
-      <h2>Carrito de Compras</h2>
+      <h2>
+        <img src="/carrito-de-compras.png" alt="Carrito de Compras" style={{ width: '50px', marginRight: '10px' }} />
+        Carrito de Compras
+      </h2>
       {cart.length === 0 ? (
         <p>Tu carrito está vacío.</p>
       ) : (

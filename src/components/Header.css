@@ -4,13 +4,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
     background-color: #877CC7;
     box-shadow: "0 2px 5px rgba(0, 0, 0, 0.1)";
     position: "sticky";
     top: 0;
     z-index: 1;
-    
+    position: relative;
 
   }
   
@@ -28,6 +27,8 @@
     gap: 30px;
     margin: 0;
     padding: 0;
+    position: relative;
+    left: -2rem;
   }
   
   .nav ul li a {
@@ -38,7 +39,7 @@
   }
   
   .nav ul li a:hover {
-    color: #ffffff; /* Color al pasar el ratón por encima */
+    color:  palegreen; /* Color al pasar el ratón por encima */
   }
   
   .nav ul li a:active {

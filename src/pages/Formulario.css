@@ -1,5 +1,5 @@
-/* Estilos generales 
-/* .container {
+Estilos generales 
+ .container {
     display: flex;
     justify-content: space-between;
     padding: 20px;
@@ -8,8 +8,8 @@
   }
 
   
-  /* Sección izquierda */
-  /* .left-section {
+   
+   .left-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -181,9 +181,9 @@ button:hover {
   button {
       font-size: 16px;
   }
-} */
+} 
 
-/* 
+
 @media (max-width: 768px) {
   .container {
       flex-direction: column; 
@@ -242,7 +242,7 @@ button:hover {
   button {
       font-size: 18px;
   }
-}  */
+}  
 
 
 
@@ -260,8 +260,8 @@ button:hover {
   
 }
 
-/* Centrar la imagen del logo */
-img {
+
+ .formulario img {
   display: block;
   margin: 0 auto 20px auto;
   max-width: 300px;
@@ -269,8 +269,8 @@ img {
 
 }
 
-/* Texto principal */
-p {
+
+ .formulario p {
   font-size: 18px;
   color: #555555;
   margin-bottom: 20px;
@@ -278,8 +278,8 @@ p {
   font-weight: 500;
 }
 
-/* Botones principales */
-button {
+
+.formulario button {
   background-color:  #877CC7;
   color: white;
   font-size: 16px;
@@ -292,13 +292,13 @@ button {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-button:hover {
+ .formulario button:hover {
   background-color: #5247e4;
-  transform: translateY(-3px); /* Efecto flotante */
+  transform: translateY(-3px); 
 }
 
-/* Inputs */
-input[type="text"], input[type="number"] {
+
+.formulario input[type="text"], input[type="number"] {
   width: 100%;
   padding: 12px;
   margin: 12px 0;
@@ -308,17 +308,17 @@ input[type="text"], input[type="number"] {
   transition: all 0.3s ease;
 }
 
-input[type="text"]:focus, input[type="number"]:focus {
+.formulario input[type="text"]:focus, input[type="number"]:focus {
   border-color: #6C63FF;
   box-shadow: 0 0 8px rgba(108, 99, 255, 0.5);
   outline: none;
 }
 
-input[type="checkbox"] {
+.formulario input[type="checkbox"] {
   margin-right: 10px;
 }
 
-label {
+l.formulario label {
   font-size: 16px;
   color: #555555;
   margin: 15px 0;
@@ -327,8 +327,8 @@ label {
   text-align: left;
 }
 
-/* Mensajes de error y éxito */
-p[style="color: red"] {
+
+.formulario p[style="color: red"] {
   color: #B00020;
   background-color: #FFDCE0;
   padding: 10px;
@@ -337,7 +337,7 @@ p[style="color: red"] {
   margin-top: 15px;
 }
 
-p[style="color: green"] {
+.formulario p[style="color: green"] {
   color: #0F5132;
   background-color: #D1E7DD;
   padding: 10px;
@@ -346,32 +346,32 @@ p[style="color: green"] {
   margin-top: 15px;
 }
 
-/* Contenedor de botones */
-div > div {
+
+.formulario div > div {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Acomoda los botones si hay poco espacio */
+  flex-wrap: wrap; 
 }
 
-button + button {
-  margin-left: 10px; /* Espaciado entre botones */
+.formulario button + button {
+  margin-left: 10px; 
 }
 
-/* Responsividad */
+
 @media (max-width: 768px) {
   .formulario {
     padding: 20px;
   }
 
-  button {
+  .formulario button {
     font-size: 14px;
     padding: 10px 15px;
-    width: 100%; /* Botones ocupan el ancho completo */
+    width: 100%; 
     margin: 5px 0;
   }
 
-  input[type="text"], input[type="number"] {
+  .formulario input[type="text"], input[type="number"] {
     font-size: 14px;
     padding: 10px;
   }
-}
+} 
