@@ -1,61 +1,77 @@
 import './Formulario.css';
+import React, { useState } from "react";
+import axios from "axios";
+
+const API_URL = "http://127.0.0.1:8000"; // URL de tu backend
 
 const Formulario = () => {
+  const [referencia, setReferencia] = useState(""); // Estado para la referencia (minúscula por el backend)
+  const [producto, setProducto] = useState(null); // Estado para el producto encontrado
+  const [mensaje, setMensaje] = useState(""); // Estado para los mensajes de error o éxito
+
+  // Manejar el cambio en el input de referencia
+  const handleInputChange = (e) => {
+    setReferencia(e.target.value);
+  };
+
+  // Buscar producto por referencia
+  const buscarProducto = async () => {
+    if (!referencia.trim()) {
+      setMensaje("Por favor, ingresa una referencia válida.");
+      return;
+    }
+
+    try {
+      const response = await axios.get(`${API_URL}/productos/`, {
+        params: { referencia }, // El backend espera "referencia"
+      });
+
+      if (response.data.length > 0) {
+        setProducto(response.data[0]); // Tomar el primer producto encontrado
+        setMensaje(""); // Limpiar mensajes previos
+      } else {
+        setProducto(null);
+        setMensaje("No se encontró ningún producto con esa referencia.");
+      }
+    } catch (error) {
+      console.error("Error al buscar el producto:", error);
+      setProducto(null);
+      if (error.response) {
+        // Error del servidor
+        setMensaje("Error del servidor: " + error.response.data.detail || "Consulta fallida.");
+      } else if (error.request) {
+        // No hay respuesta del servidor
+        setMensaje("No se pudo conectar al servidor. Verifica tu conexión.");
+      } else {
+        // Error desconocido
+        setMensaje("Ocurrió un error inesperado al buscar el producto.");
+      }
+    }
+  };
+
   return (
-    <div className="container">
-      
-     
-      <div className="left-section">
-          {/* Logo */}
-       <img src="/logo_dora.jpeg" alt="Logoformulario" className="logoformulario" />
-       
+    <div>
+      <h1>Buscar Producto</h1>
+      <input
+        type="text"
+        placeholder="Ingrese referencia"
+        value={referencia}
+        onChange={handleInputChange}
+      />
+      <button onClick={buscarProducto}>Buscar</button>
 
-      </div>
-      
+      {mensaje && <p style={{ color: "red" }}>{mensaje}</p>}
 
-      <div className="right-section">
-        
-
-        {/* Primer formulario */}
-        <form className="form">
-          <div className='h1titulo'>
-          <h1>ALMACENAMIENTO DE INFORMACIÓN DE MI EMPRESA</h1>
-          </div>
-          
-          <label>Nombre del Cliente:</label>
-          <input type="text" placeholder="Nombre del Cliente" />
-
-          <label>Producto de belleza:</label>
-          <input type="text" placeholder="Producto de belleza" />
-
-          <label>Producto de aseo:</label>
-          <input type="text" placeholder="Producto de aseo" />
-
-          <button type="submit">Agregar</button>
-        </form>
-
-        {/* Segundo formulario */}
-        <form className="form">
-          
-          <label>Cliente:</label>
-          <input type="text" placeholder="Cliente" />
-
-          <label>Producto de belleza:</label>
-          <input type="text" placeholder="Producto de belleza" />
-
-          <label>Usuario #1:</label>
-          <input type="text" placeholder="Usuario #1" />
-
-          <label>Eterno Brillo:</label>
-          <input type="text" placeholder="Eterno Brillo" />
-
-          <label>Producto de aseo:</label>
-          <input type="text" placeholder="Producto de aseo" />
-
-          <button type="submit">Buscar</button>
-          <button type="button" className="delete-btn">Eliminar</button>
-        </form>
-      </div>
+      {producto && (
+        <div>
+          <h2>Detalles del Producto</h2>
+          <p><strong>Referencia:</strong> {producto.Referencia}</p>
+          <p><strong>Nombre:</strong> {producto.name}</p>
+          <p><strong>Unidad:</strong> {producto.Unidad}</p>
+          <p><strong>Disponible:</strong> {producto.available}</p>
+          <p><strong>Precio:</strong> ${producto.precio}</p>
+        </div>
+      )}
     </div>
   );
 };
