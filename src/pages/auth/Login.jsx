@@ -9,7 +9,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   // Valores de login "quemados"
-  const validEmail = 'kevin@gmail.com';
+  const validEmail = 'susysalo@gmail.com';
   const validPassword = '123456';
 
   const handleSubmit = (e) => {

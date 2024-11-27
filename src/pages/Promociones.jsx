@@ -82,14 +82,7 @@ const Promociones = () => {
         </div>
       </section>
 
-      {/* Testimonial Section */}
-      <section className="testimoniales">
-        <h2>Lo que nuestros clientes dicen</h2>
-        <div className="testimonial">
-          <p>"Nuestros clientes confirman que la calidad y la experiencia de compra son inigualables. Desde fragancias duraderas hasta un servicio de atención al cliente excepcional, muchos ya han encontrado su aroma perfecto. Aquí te compartimos lo que algunos de ellos tienen que decir sobre su experiencia de compra con nosotros. ¡Únete a nuestra comunidad de clientes felices y descubre tu fragancia ideal!"</p>
-          <span>- María P.</span>
-        </div>
-      </section>
+    
 
       <Footer />
     </>

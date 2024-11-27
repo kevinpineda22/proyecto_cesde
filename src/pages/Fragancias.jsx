@@ -70,18 +70,7 @@ const Fragancias = () => {
         ))}
       </section>
 
-      {/* Testimonials Section */}
-      <section className="testimonials">
-        <h2>Lo que nuestros clientes dicen</h2>
-        <div className="testimonial">
-          <p>"Rose Elegance es mi fragancia favorita. Dura todo el día y siempre recibo cumplidos."</p>
-          <span>- María P.</span>
-        </div>
-        <div className="testimonial">
-          <p>"Ocean Breeze es perfecto para el verano, su aroma fresco es simplemente increíble."</p>
-          <span>- Javier R.</span>
-        </div>
-      </section>
+    
 
      <Footer/>
     </>
