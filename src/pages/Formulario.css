@@ -1,5 +1,4 @@
-Estilos generales 
- .container {
+.container {
     display: flex;
     justify-content: space-between;
     padding: 20px;
@@ -29,7 +28,7 @@ Estilos generales
     margin-bottom: -160px;
     position: relative;
     top: -15em;
-    left: 7rem;
+    left: 30rem; /* Adjusted to move more to the left */
   }
   
  
@@ -137,7 +136,7 @@ button:hover {
   .logoformulario {
       width: 50%; 
       margin-bottom: -30px;
-      left: 0;
+      left: 0; /* Centered for mobile */
       top: 0;
   }
 
@@ -199,7 +198,7 @@ button:hover {
   .logoformulario {
       width: 70%; 
       margin-bottom: -30px;
-      left: 0;
+      left: 0; /* Centered for tablet */
   }
 
   .right-section {
@@ -264,8 +263,9 @@ button:hover {
  .formulario img {
   display: block;
   margin: 0 auto 20px auto;
-  max-width: 300px;
+  max-width: 280px;
   height: auto;
+  
 
 }
 

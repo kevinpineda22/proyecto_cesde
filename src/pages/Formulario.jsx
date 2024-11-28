@@ -288,7 +288,7 @@ const Formulario = () => {
   return (
     <div className="formulario">
       <div className="susy">
-        <img src="/logo_dora.jpeg" alt="Logo de la empresa" />
+        <img src="susysalo.png" alt="Logo de la empresa" />
       </div>
 
       <p>Selecciona la opción que deseas aplicar a tu inventario:</p>

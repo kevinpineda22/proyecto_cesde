@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Hook para la redirección
+import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 const Login = () => {
@@ -27,29 +27,31 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      <div className="Logotipo">
-        <img src="/logo_dora.jpeg" alt="Logo de la empresa" />
-      </div>
-      <form className="login-form" onSubmit={handleSubmit}>
+      <div className="login-form">
         <h2>Iniciar Sesión</h2>
-        {error && <p style={{ color: 'red' }}>{error}</p>}
-        <label>Email:</label>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <label>Contraseña:</label>
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <button type="submit">Iniciar Sesión</button>
+        <div className="Logotipo">
+          <img src="/susysalo.png" alt="Logo de la empresa" />
+        </div>
+        <form onSubmit={handleSubmit}>
+          {error && <p style={{ color: 'red' }}>{error}</p>}
+          <label>Email:</label>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <label>Contraseña:</label>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">Iniciar Sesión</button>
+        </form>
         <p>¿Olvidaste la contraseña?</p>
-      </form>
+      </div>
     </div>
   );
 };
